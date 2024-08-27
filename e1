@@ -1,0 +1,44 @@
+1)
+def main():
+    user_input = input("Please enter a string: ")
+    unique_upper = set()
+    unique_lower = set()
+
+    for char in user_input:
+        if char.isupper():
+            unique_upper.add(char)
+        elif char.islower():
+            unique_lower.add(char)
+    print("Unique uppercase characters:")
+    for char in sorted(unique_upper):
+        print(char, end=" ")
+
+    print("\nUnique lowercase characters:")
+    for char in sorted(unique_lower):
+        print(char, end=" ")
+
+if __name__ == "__main__":
+    main()
+
+
+
+2)
+def find_most_repeated(input_string):
+    letter_freq = {}
+    words = input_string.split()
+    for char in word:
+            if char.isalpha():
+                letter_freq[char.lower()] = letter_freq.get(char.lower(), 0) + 1
+    max_letter_freq = max(letter_freq.values())
+    most_repeated_letters = [char for char, freq in letter_freq.items() if freq == max_letter_freq]
+
+    return most_repeated_letters
+
+def main():
+    user_input = input("Please enter a string: ")
+    print("Most repeated letter(s):")
+    for char in most_repeated_letters:
+        print(char)
+        
+if __name__ == "__main__":    
+    main()
